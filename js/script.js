@@ -67,7 +67,50 @@ function addTileLayers(tileLayers) {
     var ctx = canvas.getContext('2d');
     var img = new Image()
 
+// POI
+								var mapId = 1596;
 
+								// Get points //
+								var json = (function () {
+										var json = null;
+										$.ajax({
+												'async': false,
+												'global': false,
+												'url': 'https://app.orbitist.com/api/v1/geojson/' +  mapId + '.json',
+												'dataType': "json",
+												'success': function (data) {
+														json = data;
+												}
+										});
+										return json;
+								})(); 
+ 
+								var orbitistGeoJson = json;
+	
+								// ADVANCED: This tells the map what goes in popups.
+								function orbitistPopup(feature, layer) {
+										// does this feature have a property named popupContent?
+										if (feature.properties && feature.properties.name) {
+												layer.bindPopup(feature.properties.description, {closeButton: false});
+										}
+								}
+								
+								// Add markers to map based on geojson
+								var geoJsonLayer = L.geoJson(orbitistGeoJson, {
+									pointToLayer: function(feature, latlng) {
+										 var smallIcon = L.divIcon({
+								className: feature.properties.mapPointIconClass,
+								iconSize: [30, 30],
+								iconAnchor: [15, 30],
+								popupAnchor: [0, -28]
+										 });
+										 return L.marker(latlng, {icon: smallIcon});
+									},
+										onEachFeature: orbitistPopup
+								});
+								
+								map.addLayer(geoJsonLayer);
+// END POI
 
     img.src = Mustache.render(topLayer.url.replace(/{/g, '{{').replace(/}/g,'}}'),{
       z: zoom,
