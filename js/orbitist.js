@@ -1,9 +1,9 @@
 var mapId = 1596;
 		
 // Retrieve map info
-jQuery(document).ready(
+$(document).ready(
     function(){
-        jQuery.getJSON(
+        $.getJSON(
             'https://app.orbitist.com/api/v1/map_info.json?nid=' + mapId,
             function(data){
                 // ciclo l'array
@@ -20,8 +20,8 @@ jQuery(document).ready(
                          basemapurl =  data[i].mapbasemap;
                          custombasemapurl = data[i].custombasemap;
                          customcss = data[i].mapcss;
-                    jQuery('div.mapinfo').append(content);
-                  	jQuery('head').append('<style>' + customcss + '</style>');
+                    $('div.mapinfo').append(content);
+                    $('head').append('<style>' + customcss + '</style>');
 					// Add cartodb layer
 					cartodb.createLayer(map, cartodbkey).addTo(map);
 					// Add ZXY tile layers
@@ -49,7 +49,7 @@ var map = new L.Map('map',{maxZoom: 18});
 // Get points //
 var json = (function () {
     var json = null;
-    jQuery.ajax({
+    $.ajax({
         'async': false,
         'global': false,
         'url': 'https://app.orbitist.com/api/v1/geojson/' +  mapId + '.json',
