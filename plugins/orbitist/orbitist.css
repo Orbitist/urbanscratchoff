@@ -1,3 +1,7 @@
+/* CSS Libraries */
+@import url("//app.orbitist.com/launch/plugins/lightbox/css/lightbox.css");
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+
 p {
 font-size: 16px;
 }
