@@ -67,7 +67,28 @@ function addTileLayers(tileLayers) {
     var ctx = canvas.getContext('2d');
     var img = new Image()
 
+// add POI
+	var mapId = 1596;
 
+	// Get points //
+	var json = (function () {
+			var json = null;
+			$.ajax({
+					'async': false,
+					'global': false,
+					'url': 'https://app.orbitist.com/api/v1/geojson/' +  mapId + '.json',
+					'dataType': "json",
+					'success': function (data) {
+							json = data;
+					}
+			});
+			return json;
+	})(); 
+ 
+	var orbitistGeoJson = json;
+	
+	L.geoJson(orbitistGeoJson).addTo(map);
+// END POI
 
     img.src = Mustache.render(topLayer.url.replace(/{/g, '{{').replace(/}/g,'}}'),{
       z: zoom,
