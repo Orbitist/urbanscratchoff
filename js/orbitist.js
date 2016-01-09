@@ -1,8 +1,54 @@
-var mapId = 1596; // ENTER YOUR ORBITIST MAP NUMBER HERE
+var mapId = 1596;
+		
+// Retrieve map info
+$(document).ready(
+    function(){
+        $.getJSON(
+            'https://app.orbitist.com/api/v1/map_info.json?nid=' + mapId,
+            function(data){
+                // ciclo l'array
+                for(i=0; i<data.length; i++){
+                    var  content  = '<img src="';
+                         content +=  data[i].mapimage;
+                         content  += '" class="img-responsive">';
+                    	 	 content  += '<div class="story-slide-content"><h4>';
+                         content +=  data[i].maptitle;
+                         content  += '</h4>';
+                         content +=  data[i].mapbody;
+                         content +=  '</div>';
+                         cartodbkey =  data[i].mapcartodbkey;
+                         basemapurl =  data[i].mapbasemap;
+                         custombasemapurl = data[i].custombasemap;
+                         customcss = data[i].mapcss;
+                    $('div.mapinfo').append(content);
+                    $('head').append('<style>' + customcss + '</style>');
+					// Add cartodb layer
+					cartodb.createLayer(map, cartodbkey).addTo(map);
+					// Add ZXY tile layers
+					if ( basemapurl.length > 10 ) {
+						L.tileLayer(basemapurl, {
+							attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors © <a href="http://mapbox.com/map-feedback/">Mapbox</a>'
+						}).addTo(map);
+					}
+					if ( custombasemapurl.length > 10 ) {
+						L.tileLayer(custombasemapurl).addTo(map);
+					}
+                }
+            }
+        );
+    }
+);
 
-// Get Orbitist Points //
-var orbitistGeoJson = (function () {
-    var orbitistGeoJson = null;
+// Set lat/long where the map initiates and at what zoom level
+var map = new L.Map('map',{maxZoom: 18});
+
+
+
+
+
+// Get points //
+var json = (function () {
+    var json = null;
     $.ajax({
         'async': false,
         'global': false,
@@ -12,9 +58,11 @@ var orbitistGeoJson = (function () {
             json = data;
         }
     });
-    return orbitistGeoJson;
-})();
-
+    return json;
+})(); 
+ 
+var orbitistGeoJson = json;
+  
 // ADVANCED: This tells the map what goes in popups.
 function orbitistPopup(feature, layer) {
     // does this feature have a property named popupContent?
@@ -23,7 +71,7 @@ function orbitistPopup(feature, layer) {
     }
 }
 
-// Set cluster variables
+// Set cluster var
 var markers = L.markerClusterGroup({maxClusterRadius: 25, disableClusteringAtZoom: 17});
 
 // Add markers to map based on geojson
@@ -44,7 +92,7 @@ markers.addLayer(geoJsonLayer);
 map.addLayer(markers);
 map.fitBounds(markers.getBounds());
 
-// Deal with twitter script fires
-		window.setInterval(function(){
-			twttr.widgets.load()
-		}, 500);
+// Use leaflet hash
+var hash = new L.Hash(map);
+// Use leaflet locate control
+L.control.locate().addTo(map);
