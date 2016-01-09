@@ -67,7 +67,7 @@ function addTileLayers(tileLayers) {
     var ctx = canvas.getContext('2d');
     var img = new Image()
 
-// add POI
+// add ORBITIST POI
 	var mapId = 1596;
 
 	// Get points //
@@ -87,8 +87,17 @@ function addTileLayers(tileLayers) {
  
 	var orbitistGeoJson = json;
 	
-	L.geoJson(orbitistGeoJson).addTo(map);
-// END POI
+	function onEachFeature(feature, layer) {
+			// does this feature have a property named popupContent?
+			if (feature.properties && feature.properties.name) {
+					layer.bindPopup(feature.properties.description, {closeButton: false});
+			}
+	}
+	
+	L.geoJson(geojsonFeature, {
+			onEachFeature: onEachFeature
+	}).addTo(map);
+// END ORBITIST POI
 
     img.src = Mustache.render(topLayer.url.replace(/{/g, '{{').replace(/}/g,'}}'),{
       z: zoom,
