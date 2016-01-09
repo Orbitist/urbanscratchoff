@@ -90,11 +90,11 @@ function addTileLayers(tileLayers) {
 	function onEachFeature(feature, layer) {
 			// does this feature have a property named popupContent?
 			if (feature.properties && feature.properties.name) {
-					layer.bindPopup(feature.properties.description, {closeButton: false});
+					layer.bindPopup(feature.properties.description);
 			}
 	}
 	
-	L.geoJson(geojsonFeature, {
+	L.geoJson(orbitistGeoJson, {
 			onEachFeature: onEachFeature
 	}).addTo(map);
 // END ORBITIST POI
