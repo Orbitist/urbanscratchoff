@@ -1,3 +1,991 @@
+p {
+font-size: 16px;
+}
+
+a {
+color: rgba(30,93,129,0.8);
+}
+
+a:hover {
+color: rgba(30,93,129,1);
+}
+
+/* Z-INDEX Utilities */
+.z10 {
+z-index: 10;
+}
+.z20 {
+z-index: 20;
+}
+.z30 {
+z-index: 30;
+}
+.z40 {
+z-index: 40;
+}
+
+/** Scrollbars **/
+::-webkit-scrollbar {
+    width: 4px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0.1); 
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: rgba(0,0,0,0.5); 
+}
+
+.code {
+word-wrap: break-word;
+font-size: 12px;
+font-family: monospace;
+}
+
+.shadow {
+-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/** Logo **/
+.logo img {
+width: 35px;
+border-radius: 8px;
+opacity: 0.6;
+}
+
+.logo img:hover {
+opacity: 1;
+}
+
+/** Edit map screen **/
+iframe.edit-map {
+width: 100%;
+height: 600px;
+}
+
+/** Orbitist Buttons **/
+.map-button {
+    background-color: #fff;
+    border-radius: 40px;
+    border-color: white;
+    border-width: thin;
+    color: #444;
+    border: 2px;
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+		box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+		height: 26px;
+		padding: 0 8px;
+}
+	.map-button:hover {
+		background-color: #eee;
+	}
+@media (max-width: 600px) {
+	.map-button {
+		height: 28px;
+		padding: 0 8px;
+	}
+}
+.map-button span.fa.fa-expand {
+	margin-top: 6px;
+}
+
+.btn-explore {
+width: 100%;
+background-color: #eee;
+height: 40px;
+}
+
+.btn-default {
+background-color: rgba(30,93,129,0.8);
+border-color: rgba(30,93,129,0.6);
+color: #eee;
+}
+
+.btn-default:hover {
+background-color: rgba(30,93,129,1);
+border-color: rgba(30,93,129,0.8);
+color: white;
+}
+
+.btn-success {
+background-color: rgba(30,93,129,0.8);
+border-color: rgba(30,93,129,0.6);
+color: #eee;
+}
+
+.btn-success:hover {
+background-color: rgba(30,93,129,1);
+border-color: rgba(30,93,129,0.8);
+color: white;
+}
+
+.btn-info {
+background-color: rgba(30,93,129,0.8);
+border-color: rgba(30,93,129,0.6);
+color: #eee;
+}
+
+.btn-info:hover {
+background-color: rgba(30,93,129,1);
+border-color: rgba(30,93,129,0.8);
+color: white;
+}
+
+.btn-primary {
+background-color: rgba(30,93,129,0.8);
+border-color: rgba(30,93,129,0.6);
+color: #eee;
+}
+
+.btn-primary:hover {
+background-color: rgba(30,93,129,1);
+border-color: rgba(30,93,129,0.8);
+color: white;
+}
+
+.btn-orbitist {
+background-color: rgba(241,194,137,0.9);
+border-color: rgba(241,194,137,0.6);
+color: #777;
+}
+
+.btn-orbitist:hover {
+background-color: rgba(241,194,137,1);
+border-color: rgba(241,194,137,0.8);
+color: #333;
+}
+
+.point-edit {
+position: absolute;
+top: -3px;
+left: 5px;
+}
+
+p.btn.btn-default {
+overflow: hidden;
+}
+
+.form-submit {
+width: 100%;
+}
+
+/* Navbar Buttons */
+.navbar-nav>li>a.nav-button {
+padding-top: 3px;
+padding-bottom: 0px;
+}
+
+/** Filter Buttons **/
+.views-submit-button, .views-submit-button .btn {
+margin-top: -15px;
+}
+
+.views-exposed-form .views-exposed-widget {
+padding: 0px;
+}
+
+/** Views Tags Filter **/
+.views-widget-filter-field_tags_tid {
+	width: 250px;
+	padding: 0 10px;
+}
+
+/** Vertical tabs adjustments **/
+div.vertical-tabs .vertical-tabs-panes fieldset fieldset {
+padding: 0;
+}
+
+/** Map Widget **/
+.field-name-field-location {
+margin-top: 10px;
+padding: 6px;
+border: 0px solid transparent;
+border-color: #ccc;
+border-radius: 4px;
+}
+
+.field-use-geocoder-submit {
+margin-bottom: 6px;
+}
+
+/** Node Submission **/
+.media-item {
+width: 300px;
+}
+
+/** List view **/
+.view-points-list .btn {
+}
+
+/** Make dropdown menus top of everything **/
+.dropdown-menu {
+z-index: 10000;
+}
+
+/** Big icons **/
+.big-icon {
+font-size: 80px;
+padding-top: 40px;
+text-align: center;
+}
+
+/** mapp-tile **/
+.mapp-tile {
+text-align: center;
+}
+
+/** Remove OEmbed labels **/
+.oembed-title {
+display: none;
+}
+
+/** Shadows **/
+.panel, .btn, .ip-geoloc-map {
+-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/** Background color for radio buttons **/
+.no-term-reference-tree-button {
+background-color: white;
+}
+
+p.full-width {
+margin-left: 0px;
+margin-right: 0px;
+}
+
+tr.odd {
+background-color: #f9f9f9;
+}
+
+#edit-submit-my-maps, #edit-submit-point-list {
+margin-top: 40px;
+}
+
+.explore-container {
+padding: 0 20px 10px 20px;
+}
+
+.geofield-gmap-cnt {
+width: 100%;
+height: 500px;
+}
+
+.attribution-text {
+padding: 10px;
+border-radius: 4px;
+font-size: 10px;
+}
+
+/** Editing the images of marker options **/
+.term-reference-tree-level img {
+width: 20px;
+}
+
+#edit-field-marker-und ul li { 
+display: inline; 
+padding: .5em 1em;
+margin: 1px;
+background-color: rgba(241,194,137,0.8);
+border-radius: 4px;
+line-height: 1.5em;
+display: inline-block;
+}
+
+#edit-field-marker-und ul li:hover {
+background-color: rgba(241,194,137,1);
+}
+
+div.form-type-checkbox.form-item.checkbox {
+display: inline; 
+padding: .5em 1em;
+margin: 1px;
+background-color: rgba(241,194,137,0.8);
+border-radius: 4px;
+line-height: 1.5em;
+display: inline-block;
+}
+
+div.form-type-checkbox.form-item.checkbox:hover	 {
+background-color: rgba(241,194,137,1);
+}
+
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+margin-left: 0px;
+margin-right: 5px;
+}
+
+.no-term-reference-tree-button {
+display: none;
+}
+
+/*** atlas menus ***/
+.atlasmenu {
+visibility: hidden;
+opacity: 0;
+position: fixed;
+left: -2000px;
+top: 0px;
+width: 100%;
+height: 100%;
+overflow-y: scroll;
+overflow-x: hidden;
+background-color: rgba(0,0,0,0.8);
+transition: visibility 0.2s, opacity 0.2s linear;
+padding: 0px 5px;
+}
+.atlasmenu.active {
+visibility: visible;
+opacity: 1;
+left: 0px;
+}
+
+.atlastoggle {
+position: fixed;
+top: 4px;
+left: 4px;
+}
+
+.atlastitle h3 {
+	color: #eee;
+	padding-top: 20px;
+}
+
+.atlascontent .row {
+max-height: 200px;
+overflow: hidden;
+}
+.atlascontent p.lead {
+	margin-bottom: 0px;
+}
+.atlascontent p.lead:hover {
+	text-decoration: underline;
+}
+.atlascontent p {
+	color: white;
+} 
+
+.atlascontent small {
+	color: #eee;
+}
+.atlascontent img {
+border-radius: 200px;
+max-height: 100%;
+}
+.atlascontent .col-xs-3 {
+	padding-right: 0px;
+}
+
+/*** Story Slides ***/
+.story-slide {
+position: fixed;
+right: -1000px;
+max-height: 90%;
+max-width: 500px;
+overflow-y: scroll;
+overflow-x: hidden;
+top: 10px;
+background-color: white;
+-webkit-transition: right 0.5s; /* Safari */
+transition: right 0.5s;
+-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+border-radius: 4px;
+}
+.story-slide.in {
+right: 10px;
+}
+.story-slide .btnmapinfo-close {
+position: fixed;
+-webkit-transition: right 0.5s; /* Safari */
+transition: right 0.5s;
+right: -200px;
+top: 13px;
+height: 26px;
+}
+.story-slide .btnmapinfo-close.in {
+position: fixed;
+-webkit-transition: right 0.5s; /* Safari */
+transition: right 0.5s;
+right: 18px;
+top: 13px;
+}
+@media (max-width: 600px) {
+.story-slide {
+top: 20px;
+max-height: 90%;
+width: auto;
+max-width: 100%;
+margin: 0px 15px;
+}
+.story-slide.in {
+right: 0px;
+}
+.story-slide .btnmapinfo-close {
+top: 25px;;
+}
+.story-slide .btnmapinfo-close.in {
+position: fixed;
+right: 24px;
+top: 25px;
+}
+}
+
+.story-slide-content {
+padding: 30px 20px 30px 20px;
+}
+
+.btn-map-info-close {
+margin-right: 0px !important;
+margin-bottom: 10px;
+}
+
+.action-items {
+width: 100%;
+margin-top: 15px;
+margin-bottom: 50px;
+}
+
+.action-items a {
+color: #999;
+font-size: 20px;
+}
+
+span.center-block {
+text-align:center;
+}
+
+/** CARTODB overrides **/
+div.cartodb-legend-stack {
+bottom: 45px !important;
+}
+
+div.cartodb-logo {
+left: 30px !important;
+}
+
+div.cartodb-timeslider {
+left: 44px !important;
+}
+
+div.cartodb-timeslider .slider {
+width: 220px !important;
+}
+
+/** Lightbox overrides **/
+.lb-nav a.lb-prev {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+.lb-nav a.lb-next {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* Deal with shallow tweets */
+blockquote.twitter-tweet {
+  display: inline-block;
+  padding: 16px;
+  margin: 10px 0;
+  max-width: 468px;
+  border: #ddd 1px solid;
+  border-top-color: #eee;
+  border-bottom-color: #bbb;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  font: bold 14px/18px Helvetica, Arial, sans-serif;
+  color: #000;
+}
+ 
+blockquote.twitter-tweet p {
+  font: normal 18px/24px Georgia, "Times New Roman", Palatino, serif;
+  margin: 0 5px 10px 0;
+}
+ 
+blockquote.twitter-tweet a[href^="https://twitter.com"] {
+  font-weight: normal;
+  color: #666;
+  font-size: 12px;
+}
+
+/* 'goto' buttons */
+.goto {
+	background-color: #eee;
+	padding-left: 3px;
+	padding-right: 3px;
+	margin-left: -3px;
+	margin-right: -3px;
+	border-bottom: solid;
+	border-bottom-color: #aaa;
+	border-bottom-width: 3px;
+	border-radius: 2px;
+}
+.goto:before {
+	content: '➴';
+}
+
+.spinner {
+position: fixed;
+width: 100%;
+height: 100%;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: white;
+z-index: 9999999999999;
+}
+.sk-spinner-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  margin-top: -40px;
+  margin-left: -40px;
+  background-color: #2675a2;
+  border-radius: 100%;
+  -webkit-animation: sk-pulseScaleOut 1s infinite ease-in-out;
+          animation: sk-pulseScaleOut 1s infinite ease-in-out; }
+@-webkit-keyframes sk-pulseScaleOut {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }
+@keyframes sk-pulseScaleOut {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }
+
+.btn-fullscreen {
+position: fixed;
+bottom: 4px;
+right: 4px;
+border-radius: 0px;
+}
+
+.leaflet-marker-pane .fa {
+font-size: 25px;
+padding-top: 0px;
+padding-left: 4px;
+text-shadow: 1px 0px 2px white, -1px 0px 2px white, 0px 1px 2px white, 0px -1px 2px white;
+color: #444;
+}
+
+/* Icon styles */
+.orbitist-icon-blue {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/orbitist-icon-blue.png");
+background-size: 30px 30px;
+}
+.orbitist-icon-green {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/orbitist-icon-green.png");
+background-size: 30px 30px;
+}
+.orbitist-icon-red {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/orbitist-icon-red.png");
+background-size: 30px 30px;
+}
+.orbitist-icon-yellow {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/orbitist-icon-yellow.png");
+background-size: 30px 30px;
+}
+.orbitist-icon-orange {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/orbitist-icon-orange.png");
+background-size: 30px 30px;
+}
+.maki {
+background-size: 30px 30px;
+}
+/* A */
+.maki-aerialway {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/aerialway.svg");
+}
+.maki-airfield {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/airfield.svg");
+}
+.maki-airport {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/airport.svg");
+}
+.maki-alcohol-shop {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/alcohol-shop.svg");
+}
+.maki-america-football {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/america-football.svg");
+}
+.maki-art-gallery {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/art-gallery.svg");
+}
+/* B */
+.maki-bakery {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/bakery.svg");
+}
+.maki-bank {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/bank.svg");
+}
+.maki-bar {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/bar.svg");
+}
+.maki-baseball {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/baseball.svg");
+}
+.maki-basketball {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/basketball.svg");
+}
+.maki-beer {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/beer.svg");
+}
+.maki-bicycle {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/bicycle.svg");
+}
+.maki-building {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/building.svg");
+}
+.maki-bus {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/bus.svg");
+}
+/* C */
+.maki-cafe {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/cafe.svg");
+}
+.maki-camera {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/camera.svg");
+}
+.maki-campsite {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/campsite.svg");
+}
+.maki-car {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/car.svg");
+}
+.maki-cemetery {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/cemetery.svg");
+}
+.maki-chemist {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/chemist.svg");
+}
+.maki-cinema {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/cinema.svg");
+}
+.maki-circle-stroked {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/circle-stroked.svg");
+}
+.maki-circle {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/circle.svg");
+}
+.maki-city {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/city.svg");
+}
+.maki-clothing-store {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/clothing-store.svg");
+}
+.maki-college {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/college.svg");
+}
+.maki-commercial {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/commercial.svg");
+}
+.maki-cricket {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/cricket.svg");
+}
+.maki-cross {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/cross.svg");
+}
+/* D */
+.maki-dam {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/dam.svg");
+}
+.maki-danger {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/danger.svg");
+}
+.maki-dentist {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/dentist.svg");
+}
+.maki-disability {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/disability.svg");
+}
+.maki-dog-park {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/dog-park.svg");
+}
+/* E */
+.maki-embassy {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/embassy.svg");
+}
+.maki-emergency-telephone {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/emergency-telephone.svg");
+}
+.maki-entrance {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/entrance.svg");
+}
+/* F */
+.maki-farm {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/farm.svg");
+}
+.maki-fast-food {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/fast-food.svg");
+}
+.maki-ferry {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/ferry.svg");
+}
+.maki-fire-station {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/fire-station.svg");
+}
+.maki-fuel {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/fuel.svg");
+}
+/* G */
+.maki-garden {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/garden.svg");
+}
+.maki-gift {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/gift.svg");
+}
+.maki-golf {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/golf.svg");
+}
+.maki-grocery {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/grocery.svg");
+}
+/* H */
+.maki-hairdresser {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/hairdresser.svg");
+}
+.maki-harbor {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/harbor.svg");
+}
+.maki-heart {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/heart.svg");
+}
+.maki-heliport {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/heliport.svg");
+}
+.maki-hospital {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/hospital.svg");
+}
+/* I */
+.maki-ice-cream {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/ice-cream.svg");
+}
+.maki-industrial {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/industrial.svg");
+}
+/* L */
+.maki-land-use {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/land-use.svg");
+}
+.maki-laundry {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/laundry.svg");
+}
+.maki-library {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/library.svg");
+}
+.maki-lighthouse {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/lighthouse.svg");
+}
+.maki-lodging {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/lodging.svg");
+}
+.maki-logging {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/logging.svg");
+}
+.maki-london-underground {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/london-underground.svg");
+}
+/* M */
+.maki-marker-stroked {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/marker-stroked.svg");
+}
+.maki-marker {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/marker.svg");
+}
+.maki-minefield {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/minefield.svg");
+}
+.maki-mobilephone {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/mobilephone.svg");
+}
+.maki-monument {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/monument.svg");
+}
+.maki-museum {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/museum.svg");
+}
+.maki-music {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/music.svg");
+}
+/* O */
+.maki-oil-well {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/oil-well.svg");
+}
+/* P */
+.maki-park {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/park.svg");
+}
+.maki-park2 {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/park2.svg");
+}
+.maki-parking-garage {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/parking-garage.svg");
+}
+.maki-parking {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/parking.svg");
+}
+.maki-pharmacy {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/pharmacy.svg");
+}
+.maki-pitch {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/pitch.svg");
+}
+.maki-place-of-worship {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/place-of-worship.svg");
+}
+.maki-playground {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/playground.svg");
+}
+.maki-police {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/police.svg");
+}
+.maki-polling-place {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/polling-place.svg");
+}
+.maki-post {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/post.svg");
+}
+.maki-prison {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/prison.svg");
+}
+/* R */
+.maki-rail-above {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/rail-above.svg");
+}
+.maki-rail-light {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/rail-light.svg");
+}
+.maki-rail-metro {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/rail-metro.svg");
+}
+.maki-rail-underground {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/rail-underground.svg");
+}
+.maki-rail {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/rail.svg");
+}
+.maki-religious-christian {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/religious-christian.svg");
+}
+.maki-religious-jewish {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/religious-jewish.svg");
+}
+.maki-religious-muslim {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/religious-muslim.svg");
+}
+.maki-restaurant {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/restaurant.svg");
+}
+.maki-roadblock {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/roadblock.svg");
+}
+.maki-rocket {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/rocket.svg");
+}
+/* S */
+.maki-school {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/school.svg");
+}
+.maki-scooter {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/scooter.svg");
+}
+.maki-shop {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/shop.svg");
+}
+.maki-skiing {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/skiing.svg");
+}
+.maki-slaughterhouse {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/slaughterhouse.svg");
+}
+.maki-soccer {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/soccer.svg");
+}
+.maki-square-stroked {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/square-stroked.svg");
+}
+.maki-square {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/square.svg");
+}
+.maki-star-stroked {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/star-stroked.svg");
+}
+.maki-star {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/star.svg");
+}
+.maki-suitcase {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/suitcase.svg");
+}
+.maki-swimming {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/swimming.svg");
+}
+/* T */
+.maki-telephone {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/telephone.svg");
+}
+.maki-tennis {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/tennis.svg");
+}
+.maki-theatre {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/theatre.svg");
+}
+.maki-toilets {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/toilets.svg");
+}
+.maki-town-hall {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/town-hall.svg");
+}
+.maki-town {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/town.svg");
+}
+.maki-triangle-stroked {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/triangle-stroked.svg");
+}
+.maki-triangle {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/triangle.svg");
+}
+/* V */
+.maki-village {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/village.svg");
+}
+/* W */
+.maki-warehouse {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/warehouse.svg");
+}
+.maki-waste-basket {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/waste-basket.svg");
+}
+.maki-water {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/water.svg");
+}
+.maki-wetland {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/wetland.svg");
+}
+/* Z */
+.maki-zoo {
+background-image: url("https://app.orbitist.com/launch/cdn/orbitist-icons/maki/zoo.svg");
+}
+
+
 /* Leaflet popups */
 .leaflet-popup {
 margin-bottom: 0px;

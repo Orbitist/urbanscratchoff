@@ -1,5 +1,5 @@
 // add ORBITIST POI
-	var mapId = 1596;
+	var mapId = 1596; // Your Orbitist map number
 
 	// Get points //
 	var json = (function () {
