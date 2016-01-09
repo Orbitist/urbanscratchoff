@@ -66,7 +66,8 @@ function addTileLayers(tileLayers) {
   canvasTiles.drawTile = function(canvas, tilePoint, zoom) {
     var ctx = canvas.getContext('2d');
     var img = new Image()
-    
+
+
 
     img.src = Mustache.render(topLayer.url.replace(/{/g, '{{').replace(/}/g,'}}'),{
       z: zoom,
