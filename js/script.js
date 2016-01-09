@@ -108,7 +108,8 @@ function addTileLayers(tileLayers) {
 									},
 										onEachFeature: orbitistPopup
 								});
-						
+								
+								map.addLayer(geoJsonLayer);
 // END POI
 
     img.src = Mustache.render(topLayer.url.replace(/{/g, '{{').replace(/}/g,'}}'),{
