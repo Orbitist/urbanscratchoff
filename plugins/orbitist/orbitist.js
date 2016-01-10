@@ -26,11 +26,20 @@
 	}
 	
 	L.geoJson(orbitistGeoJson, {
-			onEachFeature: onEachFeature
+		pointToLayer: function(feature, latlng) {
+			var smallIcon = L.divIcon({
+				className: feature.properties.mapPointIconClass,
+				iconSize: [30, 30],
+				iconAnchor: [15, 30],
+				popupAnchor: [0, -28]
+			});
+			return L.marker(latlng, {icon: smallIcon});
+		},
+		onEachFeature: onEachFeature
 	}).addTo(map);
 // END ORBITIST POI
 
-
+// Fire Twitter widget render thingy every half second... probably a lame idea?
 window.setInterval(function(){
 	twttr.widgets.load()
 }, 500);
