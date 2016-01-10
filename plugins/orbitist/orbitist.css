@@ -539,6 +539,21 @@ font-size: 20px;
 width: 100%;
 }
 
+.action-items {
+width: 100%;
+margin-top: 15px;
+margin-bottom: 50px;
+}
+
+.action-items a {
+color: #999;
+font-size: 20px;
+}
+
+span.center-block {
+text-align:center;
+}
+
 /* Make popups smaller on small iphones */
 @media (max-height: 450px) {
 .leaflet-popup-content-wrapper {
