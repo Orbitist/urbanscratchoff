@@ -7,7 +7,7 @@
 			$.ajax({
 					'async': false,
 					'global': false,
-					'url': 'https://app.orbitist.com/api/v1/geojson/' +  mapId + '.json',
+					'url': 'https://app.orbitist.com/api/v1/points/' +  mapId + '.json',
 					'dataType': "json",
 					'success': function (data) {
 							json = data;
